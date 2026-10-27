@@ -1,0 +1,61 @@
+:root {
+  --brand: #a85d44;
+  --bs-primary: var(--brand);
+  --bs-link-color: var(--brand);
+  --bs-link-hover-color: #814632;
+}
+
+[data-bs-theme="light"] {
+  --bs-body-bg: #f7f2ea;
+  --bs-body-color: #332923;
+  --panel: #fffaf5;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #191513;
+  --bs-body-color: #f5ece5;
+  --panel: #30231e;
+}
+
+.navbar,
+.card,
+.contact-panel {
+  background-color: var(--panel);
+}
+
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #814632;
+  --bs-btn-hover-border-color: #814632;
+  --bs-btn-focus-shadow-rgb: 168, 93, 68;
+}
+
+.text-brand {
+  color: var(--brand) !important;
+}
+
+.hero-video {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 20rem;
+  background-color: var(--bs-secondary-bg);
+  object-fit: cover;
+}
+
+.artwork-image {
+  height: 15rem;
+  object-fit: cover;
+}
+
+.contact-panel {
+  border: 1px solid var(--bs-border-color);
+}
+
+.location-map {
+  display: block;
+  width: 100%;
+  min-height: 20rem;
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="mn" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tailwind CSS ашиглан бүтээсэн уран зургийн цомог.">
+  <meta name="theme-color" content="#f7f2ea">
+  <title>Лаб 8 | Tailwind CSS зургийн цомог</title>
+  <link rel="stylesheet" href="lab8-tailwind-built.css">
+  <script src="lab8-tailwind.js" defer></script>
+</head>
+<body class="min-h-screen">
+  <nav class="sticky top-0 z-10 border-b border-stone-300 bg-[var(--surface)]">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4">
+      <a class="text-lg font-bold text-brand" href="#top">Уран зургийн цомог</a>
+      <div class="flex flex-wrap items-center gap-4">
+        <a class="font-medium hover:text-brand" href="#gallery">Цомог</a>
+        <a class="font-medium hover:text-brand" href="#location">Байршил</a>
+        <a class="font-medium hover:text-brand" href="#contact">Холбоо барих</a>
+        <a class="font-medium hover:text-brand" href="lab8-bootstrap.html">Bootstrap</a>
+        <a class="font-medium hover:text-brand" href="lab8-comparison.html">Харьцуулалт</a>
+        <button class="rounded-full border border-stone-400 px-4 py-2 hover:border-brand hover:text-brand" id="theme-toggle" type="button" aria-pressed="false">🌙 Харанхуй горим</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top" class="mx-auto max-w-6xl px-5 py-12">
+    <header class="mb-16 grid items-center gap-8 md:grid-cols-2">
+      <div>
+        <p class="mb-2 text-sm font-bold uppercase tracking-widest text-brand">Дэлхийн урлаг</p>
+        <h1 class="mb-4 text-4xl font-bold leading-tight md:text-5xl">Зураг бүр өөрийн гэсэн түүхтэй</h1>
+        <p class="mb-6 text-lg text-stone-600 dark:text-stone-300">Дэлхийд алдартай уран зургуудыг нэг дороос үзээрэй.</p>
+        <a class="inline-block rounded-full bg-brand px-6 py-3 font-semibold text-white hover:opacity-90" href="#gallery">Цомог үзэх</a>
+        <ul class="mt-6 flex flex-wrap gap-8" aria-label="Цомгийн мэдээлэл">
+          <li><strong class="block text-xl">08</strong><span class="text-sm text-stone-600 dark:text-stone-300">уран зураг</span></li>
+          <li><strong class="block text-xl">06</strong><span class="text-sm text-stone-600 dark:text-stone-300">улс орон</span></li>
+          <li><strong class="block text-xl">500+</strong><span class="text-sm text-stone-600 dark:text-stone-300">жилийн урлаг</span></li>
+        </ul>
+      </div>
+      <video class="aspect-[16/10] w-full rounded-3xl bg-stone-200 object-cover shadow-md" width="640" height="400" controls autoplay muted preload="metadata" playsinline poster="art-gallery-video-poster.jpg">
+        <source src="mona-lisa-5-sec.mp4" type="video/mp4">
+        <track kind="captions" src="captions.vtt" srclang="mn" label="Монгол хадмал" default>
+        Таны хөтөч видео тоглуулах боломжгүй байна.
+      </video>
+    </header>
+
+    <section id="gallery" class="mb-16" aria-labelledby="gallery-title">
+      <div class="mb-6">
+        <p class="mb-1 text-sm font-bold uppercase tracking-widest text-brand">GALLERY</p>
+        <h2 id="gallery-title" class="text-3xl font-bold">Уран зургууд</h2>
+        <p class="mt-2 text-stone-600 dark:text-stone-300">Карт бүрийн дэлгэрэнгүйг үзээрэй.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-[var(--surface)] shadow-sm"><img class="h-60 w-full object-cover" src="https://ergelt.mn/upload/images/13492928_the-starry-night-van-gogh-reproduction.jpg" alt="Одтой шөнө" loading="lazy"><div class="p-5"><h3 class="text-xl font-semibold">Starry Night</h3><p class="mt-2 text-sm text-stone-500 dark:text-stone-300">Vincent van Gogh · 1889</p><p class="mt-3">Одтой шөнө</p></div></article>
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-[var(--surface)] shadow-sm"><img class="h-60 w-full object-cover" src="https://ergelt.mn/upload/images/d248d9efd60b860d471d158c857672f2.jpg" alt="Мона Лиза" loading="lazy"><div class="p-5"><h3 class="text-xl font-semibold">The Mona Lisa</h3><p class="mt-2 text-sm text-stone-500 dark:text-stone-300">Leonardo da Vinci · 1504</p><p class="mt-3">Учиртай инээмсэглэл</p></div></article>
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-[var(--surface)] shadow-sm"><img class="h-60 w-full object-cover" src="https://tse3.mm.bing.net/th/id/OIP.zmS9s2PUa8_zkrKzwgU7pgHaIx?r=0&amp;pid=ImgDet&amp;w=474&amp;h=561&amp;rs=1&amp;o=7&amp;rm=3" alt="Сувдан ээмэгт бүсгүй" loading="lazy"><div class="p-5"><h3 class="text-xl font-semibold">Girl with a Pearl Earring</h3><p class="mt-2 text-sm text-stone-500 dark:text-stone-300">Johannes Vermeer · 1665</p><p class="mt-3">Сувдан ээмэгт бүсгүй</p></div></article>
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-[var(--surface)] shadow-sm"><img class="h-60 w-full object-cover" src="https://ergelt.mn/upload/images/MUSEUM-superJumbo.jpg" alt="Хашхираан" loading="lazy"><div class="p-5"><h3 class="text-xl font-semibold">The Scream</h3><p class="mt-2 text-sm text-stone-500 dark:text-stone-300">Edvard Munch · 1893</p><p class="mt-3">Хашхираан</p></div></article>
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-[var(--surface)] shadow-sm"><img class="h-60 w-full object-cover" src="https://ergelt.mn/upload/images/The-Kiss.jpg" alt="Үнсэлт" loading="lazy"><div class="p-5"><h3 class="text-xl font-semibold">The Kiss</h3><p class="mt-2 text-sm text-stone-500 dark:text-stone-300">Gustav Klimt · 1908</p><p class="mt-3">Үнсэлт</p></div></article>
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-[var(--surface)] shadow-sm"><img class="h-60 w-full object-cover" src="https://cdn.luxatic.com/wp-content/uploads/2019/02/Pablo-Picasso.jpg" alt="Алжирийн эмэгтэйчүүд" loading="lazy"><div class="p-5"><h3 class="text-xl font-semibold">The Women of Algiers</h3><p class="mt-2 text-sm text-stone-500 dark:text-stone-300">Pablo Picasso · 1955</p><p class="mt-3">Алжирийн эмэгтэйчүүд</p></div></article>
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-[var(--surface)] shadow-sm"><img class="h-60 w-full object-cover" src="https://i.pinimg.com/originals/a9/86/49/a98649efbbc59a66f0aca5894053517a.jpg" alt="Канагавагийн их давалгаа" loading="lazy"><div class="p-5"><h3 class="text-xl font-semibold">The Great Wave off Kanagawa</h3><p class="mt-2 text-sm text-stone-500 dark:text-stone-300">Katsushika Hokusai · 1831</p><p class="mt-3">Канагавагийн их давалгаа</p></div></article>
+        <article class="overflow-hidden rounded-2xl border border-stone-200 bg-[var(--surface)] shadow-sm"><img class="h-60 w-full object-cover" src="https://images.immediate.co.uk/production/volatile/sites/7/2021/03/GettyImages-550119221-e490377.jpg" alt="Сүүлчийн зоог" loading="lazy"><div class="p-5"><h3 class="text-xl font-semibold">The Last Supper</h3><p class="mt-2 text-sm text-stone-500 dark:text-stone-300">Leonardo da Vinci · 1498</p><p class="mt-3">Сүүлчийн зоог</p></div></article>
+      </div>
+    </section>
+
+    <section id="location" class="mb-16" aria-labelledby="location-title">
+      <p class="mb-1 text-sm font-bold uppercase tracking-widest text-brand">LOCATION</p>
+      <h2 id="location-title" class="mb-4 text-3xl font-bold">Байршил</h2>
+      <iframe class="h-80 w-full rounded-2xl border border-stone-300" title="Улаанбаатар хотын газрын зураг" src="https://www.google.com/maps?q=Ulaanbaatar&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="contact" class="rounded-3xl border border-stone-300 bg-[var(--surface)] p-6 md:p-10" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="text-2xl font-bold">Мэдээлэл авах</h2>
+      <p class="mt-2 text-stone-600 dark:text-stone-300">Цомгийн шинэ мэдээг имэйлээр аваарай.</p>
+      <form id="newsletter-form" class="mt-6 grid gap-4 md:grid-cols-[1fr_1fr_auto]" novalidate>
+        <div><label class="mb-1 block font-medium" for="visitor-name">Нэр</label><input class="w-full rounded-lg border border-stone-400 bg-transparent px-3 py-2 focus:border-brand focus:outline-none" id="visitor-name" name="name" required minlength="2"><p class="field-error mt-1 hidden text-sm text-red-600">Хамгийн багадаа 2 тэмдэгт оруулна уу.</p></div>
+        <div><label class="mb-1 block font-medium" for="visitor-email">Имэйл</label><input class="w-full rounded-lg border border-stone-400 bg-transparent px-3 py-2 focus:border-brand focus:outline-none" id="visitor-email" name="email" type="email" required><p class="field-error mt-1 hidden text-sm text-red-600">Зөв имэйл хаяг оруулна уу.</p></div>
+        <button class="self-end rounded-full bg-brand px-6 py-2.5 font-semibold text-white hover:opacity-90" type="submit">Бүртгүүлэх</button>
+      </form>
+      <p id="form-status" class="mt-3" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer class="border-t border-stone-300 px-5 py-6 text-center text-sm text-stone-500">Лаборатори 8 · Tailwind CSS</footer>
+</body>
+</html>

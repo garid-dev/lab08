@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лаб 8 | Харьцуулалт</title>
+  <style>
+    body { max-width: 900px; margin: 3rem auto; padding: 0 1rem; color: #332923; font: 1rem/1.6 Arial, sans-serif; }
+    h1, h2 { line-height: 1.2; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #d7ccc3; padding: .7rem; text-align: left; }
+    thead { background: #f1e7dd; }
+    .note { color: #66584f; }
+    .page-switch { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0; }
+    .page-switch a { display: inline-block; padding: .65rem 1rem; border: 1px solid #a85d44; border-radius: 999px; color: #814632; font-weight: 700; text-decoration: none; }
+    .page-switch a:hover, .page-switch a:focus-visible { background: #a85d44; color: white; }
+    @media (max-width: 600px) { table { font-size: .85rem; } th, td { padding: .45rem; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Лаборатори 8 — CSS framework-ийн харьцуулалт</h1>
+    <p class="note">Ижил найман карттай хуудсыг Bootstrap CDN болон Tailwind CSS CLI ашиглан бүтээв. Файлын хэмжээ нь шахаагүй байтын хэмжээс; Bootstrap-д CDN-ийн CSS дээр тухайн хуудсын CSS-ийг нэмсэн. Зураг, JavaScript болон бусад runtime хүсэлтийг CSS хэмжээнд оруулаагүй.</p>
+    <nav class="page-switch" aria-label="Хувилбар сонгох">
+      <a href="lab8-bootstrap.html">Bootstrap хувилбар</a>
+      <a href="lab8-tailwind.html">Tailwind хувилбар</a>
+    </nav>
+    <table>
+      <thead><tr><th>Хэмжүүр</th><th>Bootstrap</th><th>Tailwind CSS</th></tr></thead>
+      <tbody>
+        <tr><th>HTML хэмжээ (bytes)</th><td>9,316</td><td>9,875</td></tr>
+        <tr><th>CSS хэмжээ (framework + хуудасны CSS, bytes)</th><td>233,211</td><td>13,021</td></tr>
+        <tr><th>Нэг картын гаднах элементийн class тоо</th><td>3</td><td>6</td></tr>
+        <tr><th>Lighthouse Performance</th><td>36</td><td>70</td></tr>
+        <tr><th>Lighthouse Accessibility</th><td>96</td><td>96</td></tr>
+        <tr><th>Lighthouse Best Practices</th><td>96</td><td>96</td></tr>
+        <tr><th>Lighthouse SEO</th><td>100</td><td>100</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Дүгнэлт.</strong> Энэ хэмжилтээр Tailwind-ийн production CSS 13,021 байт, харин Bootstrap-ийн CDN болон хуудасны CSS нийлээд 233,211 байт байв; Bootstrap card гаднах элементийн class цөөн (3, Tailwind 6). Accessibility, Best Practices, SEO оноо ижил гарсан бол Lighthouse Performance энэ run-д Bootstrap-д 36, Tailwind-д 70 байлаа. Tailwind-ийн CSS хэмжээ бага бөгөөд энэ удаагийн Performance оноо өндөр гарсан ч хоёр хуудсанд ижил гаднын зургууд, видео, map iframe ашигласан тул оноог олон run-ийн дундажгүйгээр framework-ийн шууд нөлөө гэж үзэж болохгүй.</p>
+    <p class="note">Card class тоо нь зөвхөн гаднах <code>&lt;article&gt;</code>-ийн class токеныг тоолсон. Хуудас тус бүрт Lighthouse 12.8.2-оор Microsoft Edge Chromium дээр 2026-10-26-нд нэг audit run хийсэн. Оноо сүлжээ болон төхөөрөмжөөс хамаарч хэлбэлзэнэ; Bootstrap CDN-ийн шахалттай дамжуулах хэмжээ энэ хүснэгтэд тооцоогүй.</p>
+  </main>
+</body>
+</html>

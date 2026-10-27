@@ -1,0 +1,14 @@
+{
+  "name": "lab7-gallery",
+  "private": true,
+  "scripts": {
+    "build:css": "sass --no-source-map --style=compressed src/scss/lab7-gallery.scss lab7-gallery.css",
+    "watch:css": "sass --no-source-map --watch --style=compressed src/scss/lab7-gallery.scss:lab7-gallery.css",
+    "build:lab8:tailwind": "tailwindcss -i lab8-tailwind.css -o lab8-tailwind-built.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "sass": "^1.89.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

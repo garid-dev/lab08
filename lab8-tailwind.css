@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --color-brand: #a85d44;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --page: #f7f2ea;
+    --surface: #fffaf5;
+    --ink: #332923;
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #191513;
+    --surface: #30231e;
+    --ink: #f5ece5;
+  }
+
+  body {
+    background: var(--page);
+    color: var(--ink);
+  }
+}
